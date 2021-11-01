@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/break/static/css/main.d9fcc6f4.chunk.css",
+    "main.js": "/break/static/js/main.bdc852b5.chunk.js",
+    "main.js.map": "/break/static/js/main.bdc852b5.chunk.js.map",
+    "runtime-main.js": "/break/static/js/runtime-main.d9499d15.js",
+    "runtime-main.js.map": "/break/static/js/runtime-main.d9499d15.js.map",
+    "static/css/2.3f81193d.chunk.css": "/break/static/css/2.3f81193d.chunk.css",
+    "static/js/2.aabfb10a.chunk.js": "/break/static/js/2.aabfb10a.chunk.js",
+    "static/js/2.aabfb10a.chunk.js.map": "/break/static/js/2.aabfb10a.chunk.js.map",
+    "index.html": "/break/index.html",
+    "static/css/2.3f81193d.chunk.css.map": "/break/static/css/2.3f81193d.chunk.css.map",
+    "static/css/main.d9fcc6f4.chunk.css.map": "/break/static/css/main.d9fcc6f4.chunk.css.map",
+    "static/js/2.aabfb10a.chunk.js.LICENSE.txt": "/break/static/js/2.aabfb10a.chunk.js.LICENSE.txt",
+    "static/media/master.css": "/break/static/media/Avenir-Next.5db0f661.ttc",
+    "static/media/font-awesome.css": "/break/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9499d15.js",
+    "static/css/2.3f81193d.chunk.css",
+    "static/js/2.aabfb10a.chunk.js",
+    "static/css/main.d9fcc6f4.chunk.css",
+    "static/js/main.bdc852b5.chunk.js"
+  ]
+}
