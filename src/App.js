@@ -59,11 +59,11 @@ const App = () => {
                 <Switch location={location}>
                   <Route path="/not-found" component={NotFound} />
                   <Route path="/logout" component={Logout} />
-                  <Route path="/landing">
-                    <Landing />
-                  </Route>
                   <Route path="/login">
                     <LoginForm />
+                  </Route>
+                  <Route path="/landing">
+                    <Landing />
                   </Route>
                   <Route path="/register">
                     <RegisterForm />
@@ -89,7 +89,7 @@ const App = () => {
                   <ProtectedRoute path="/home">
                     <Home user={user} />
                   </ProtectedRoute>
-                  <Redirect path="/" to="/home" />
+                  <Redirect path="/" to="/login" />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
