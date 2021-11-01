@@ -36,9 +36,6 @@ import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.j
 // Set the base path to the folder you copied Shoelace's assets to
 setBasePath("/dist/shoelace");
 
-const UserContext = createContext({});
-
-//   render()
 const App = () => {
   const [user, setUser] = useState({});
   const [timer, setTimer] = useState("300000");
@@ -89,7 +86,7 @@ const App = () => {
                   <ProtectedRoute path="/home">
                     <Home user={user} />
                   </ProtectedRoute>
-                  <Redirect path="/" to="/login" />
+                  <Redirect path="/" to="/landing" />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
