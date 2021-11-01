@@ -36,6 +36,9 @@ import { setBasePath } from "@shoelace-style/shoelace/dist/utilities/base-path.j
 // Set the base path to the folder you copied Shoelace's assets to
 setBasePath("/dist/shoelace");
 
+const UserContext = createContext({});
+
+//   render()
 const App = () => {
   const [user, setUser] = useState({});
   const [timer, setTimer] = useState("300000");
@@ -44,6 +47,8 @@ const App = () => {
     const newUser = auth.getCurrentUser();
     setUser(newUser);
   }, []);
+
+  console.log(user);
 
   return (
     <React.Fragment>
@@ -56,31 +61,37 @@ const App = () => {
                 <Switch location={location}>
                   <Route path="/not-found" component={NotFound} />
                   <Route path="/logout" component={Logout} />
-                  <Route path="/login">
-                    <LoginForm />
-                  </Route>
                   <Route path="/landing">
                     <Landing />
+                  </Route>
+                  <Route path="/login">
+                    <LoginForm />
                   </Route>
                   <Route path="/register">
                     <RegisterForm />
                   </Route>
-                  <Route path="/content">
+                  <ProtectedRoute path="/content">
                     <Content timer={timer} />
-                  </Route>
-                  <Route path="/newBreak">
+                  </ProtectedRoute>
+                  <ProtectedRoute path="/newBreak">
                     <NewBreak timer={timer} setTimer={setTimer} />
-                  </Route>
-                  <Route path="/learnOptions" component={LearnOptions} />
-                  <Route path="/laughOptions" component={LaughOptions} />
+                  </ProtectedRoute>
+                  <ProtectedRoute
+                    path="/learnOptions"
+                    component={LearnOptions}
+                  />
+                  <ProtectedRoute
+                    path="/laughOptions"
+                    component={LaughOptions}
+                  />
                   <Route path="/mindfullness" component={Mindfullness} />
-                  <Route path="/profile">
+                  <ProtectedRoute path="/profile">
                     <Profile user={user} />
-                  </Route>
-                  <Route path="/home">
+                  </ProtectedRoute>
+                  <ProtectedRoute path="/home">
                     <Home user={user} />
-                  </Route>
-                  <Redirect path="/" to="/landing" />
+                  </ProtectedRoute>
+                  <Redirect path="/" to="/home" />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
