@@ -1,0 +1,26 @@
+// Vars
+
+:root {
+  // base
+  --base-txt-color: #000000;
+  --heading-color: #341e29;
+  --base-font-family: "Inconsolata", sans-serif;
+  --heading-font-family: "Avenir Next", sans-serif;
+  --body-bg: #faf8ec;
+
+  // colors
+  $brand-color: #3f3e3b;
+  --brand-color: #{$brand-color};
+  --link-color: --brand-color;
+  --logo-color: #3f3e3b;
+  --break-blue: #3e6990;
+  --break-orange: #e79f75;
+  --break-brown: #b57c5a;
+  --break-light-blue: #bacade;
+  --break-blue-half: #81a5d1;
+  --break-green: #adbc91;
+  --break-yellow: #eedeab;
+  --break-light-green: #d8dfca;
+  --break-pink: #dabfcd;
+  --break-peach: #f1c7af;
+}
