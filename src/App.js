@@ -65,27 +65,21 @@ const App = () => {
                   <Route path="/register">
                     <RegisterForm />
                   </Route>
-                  <ProtectedRoute path="/content">
+                  <Route path="/content">
                     <Content timer={timer} />
-                  </ProtectedRoute>
-                  <ProtectedRoute path="/newBreak">
+                  </Route>
+                  <Route path="/newBreak">
                     <NewBreak timer={timer} setTimer={setTimer} />
-                  </ProtectedRoute>
-                  <ProtectedRoute
-                    path="/learnOptions"
-                    component={LearnOptions}
-                  />
-                  <ProtectedRoute
-                    path="/laughOptions"
-                    component={LaughOptions}
-                  />
+                  </Route>
+                  <Route path="/learnOptions" component={LearnOptions} />
+                  <Route path="/laughOptions" component={LaughOptions} />
                   <Route path="/mindfullness" component={Mindfullness} />
-                  <ProtectedRoute path="/profile">
+                  <Route path="/profile">
                     <Profile user={user} />
-                  </ProtectedRoute>
-                  <ProtectedRoute path="/home">
+                  </Route>
+                  <Route path="/home">
                     <Home user={user} />
-                  </ProtectedRoute>
+                  </Route>
                   <Redirect path="/" to="/landing" />
                 </Switch>
               </CSSTransition>
